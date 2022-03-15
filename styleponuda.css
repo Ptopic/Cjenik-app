@@ -1,0 +1,138 @@
+@font-face {
+    font-family: "Cambria";
+    src: url('fonts/cambria.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+@font-face {
+    font-family: 'caustenbold';
+    src: url('fonts/webkits/causten-bold-webfont.woff2') format('woff2'),
+         url('fonts/webkits/causten-bold-webfont.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'caustenregular';
+    src: url('fonts/webkits/causten-regular-webfont.woff2') format('woff2'),
+         url('fonts/webkits/causten-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sofia_prolight';
+    src: url('sofia_pro_light_az-webfont.woff2') format('woff2'),
+         url('sofia_pro_light_az-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root
+{
+    --bg: #161616;
+    --item: #303135;
+    --text: #ffffff;
+    --gold: #efc900;
+}
+
+body {
+    background-color: var(--bg);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: "caustenregular", sans-serif;
+}
+
+h1 {
+    font-size: 1.1em;
+    font-family: sans-serif;
+}
+
+.backArrow {
+    padding: 10px;
+    width: 43px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    font-family: "Cambria";
+    font-size: 3.5em;
+    color: var(--gold);
+    letter-spacing: 5px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.logo::after {
+    background-image: url('images/swirl2.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: block;
+    width: 180px; 
+    height: 30px;
+    content:"";
+
+}
+
+.header {
+    margin-left: 2em;
+    font-style: normal;
+}
+
+
+.all-item-groups {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 0.5em;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-group
+{
+    display: inline-flex;
+    padding-top: 1em;
+    align-items: flex-start;
+    background: var(--item);
+    width: 93%;
+    border-radius: 15px;
+    height: 7.7vh;
+    margin-bottom: 1.5em;
+}
+
+.item-group p {
+    justify-content: start;
+    font-size: 2.15em;
+    margin-left: 0.6em;
+    margin-top: 0.6em;
+    margin-right: auto;
+}
+
+.item-group p2 {
+    justify-content: flex-end;
+    font-size: 2em;
+    padding: 4px 12px 0 0;
+    font-weight: 600;
+}
+
+.item-group p::after {
+    content: "Hello";
+    display: block;
+    padding-top: .5em;
+    font-size: .7em;
+    font-family: "sofia_prolight", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+} 

@@ -1,0 +1,396 @@
+@font-face {
+    font-family: "Cambria";
+    src: url('fonts/cambria.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+/* Causten */
+/* Causten-Regular
+Causten-Light
+Causten-Bold */
+@font-face {
+    font-family: 'caustenbold';
+    src: url('fonts/webkits/causten-bold-webfont.woff2') format('woff2'),
+         url('fonts/webkits/causten-bold-webfont.woff') format('woff');
+    font-weight: bold;
+}
+
+
+@font-face {
+    font-family: 'caustenregular';
+    src: url('fonts/webkits/causten-regular-webfont.woff2') format('woff2'),
+         url('fonts/webkits/causten-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'caustenbold';
+    src: url('fonts/webkits/causten-bold-webfont.woff2') format('woff2'),
+         url('fonts/webkits/causten-bold-webfont.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'caustenregular';
+    src: url('fonts/webkits/causten-regular-webfont.woff2') format('woff2'),
+         url('fonts/webkits/causten-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sofia_prolight';
+    src: url('fonts/webkits/sofia_pro_light_az-webfont.woff2') format('woff2'),
+         url('fonts/webkits/sofia_pro_light_az-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'caustenlight';
+    src: url('causten-light-webfont.woff2') format('woff2'),
+         url('causten-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+:root
+{
+    --bg: #161616;
+    --item: #303135;
+    --text: #ffffff;
+    --text-light: #dddddd;
+    --light-white: #f3f2f2;
+    --gold: #efc900;
+}
+
+body {
+    background: var(--bg);
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: "caustenbold", sans-serif;
+
+    transition: all 1.5s linear;
+}
+
+body.light{
+    background: #ffffff;
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-family: "caustenbold", sans-serif;
+
+    transition: all 1.5s linear;
+}
+
+/* Za ovo dodat light class */
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'caustenlight', sans-serif;
+}
+
+a.light {
+    text-decoration: none;
+    color: black;
+    font-family: 'caustenlight', sans-serif;
+    transition: color 1.5s linear;
+}
+
+.logo {
+    font-family: "Cambria";
+    font-size: 4em;
+    color: var(--gold);
+    letter-spacing: 5px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.logo::after {
+    background-image: url('images/swirl2.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: block;
+    width: 180px; 
+    height: 30px;
+    content:"";
+
+}
+
+.flex
+{
+    display: flex;
+    justify-content: center;
+}
+
+.flex button[class="languageIcon"] {
+    position: absolute;
+    top: 2.3em;
+    right: 2em;
+
+    background: none;
+    border: none;
+}
+
+
+/* Switch styling */
+
+button[class="btn-container"] {
+    position: absolute;
+    top: 0.3em;
+    left: -3.5em;
+}
+
+@keyframes testBack {
+    0% {
+        transform: translateX(0);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    
+    50%
+    {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: translateX(112px);
+        opacity: 0;
+    }
+}
+
+
+@keyframes test2Back {
+    0% {
+        transform: translateX(0);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    
+    50% {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+
+
+    100% {
+        transform: translateX(-112px);
+        opacity: 0;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    
+    70% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18vh;
+}
+
+.btn-container {
+    background-color: #373F51;
+    border-radius: 100px;
+    width: 200px;
+    height: 95px;
+    outline: none;
+    border: none;
+    position: relative;
+    display: flex;
+}
+
+.btn-container img {
+    position: absolute;
+    display: block;
+    left: -13px;
+    top: -15px;
+}
+
+.btn-container img[alt="moon"] {
+    position: absolute;
+    display: block;
+    left: -23px;
+    top: -22px;
+}
+
+.img-container-sun {
+    display: block;
+    visibility: visible;
+    position: relative;
+    left: -8px;
+    border-radius: 100px;
+    width: 95px;
+    height: 95px;
+    background-color: white;
+    opacity: 1;
+
+    transform-origin: center;
+    animation: opacity 1.8s cubic-bezier(.67,-0.07,.86,.5);
+}
+
+.img-container-sun.active {
+    display: block;
+    visibility: visible;
+    position: relative;
+    left: -8px;
+    border-radius: 100px;
+    width: 95px;
+    height: 95px;
+    opacity: 0;
+
+    animation: testBack 1.5s ease;
+}
+
+.img-container-moon {
+    display: block;
+    visibility: visible;
+    position: relative;
+    left: 10px;
+    border-radius: 100px;
+    width: 95px;
+    height: 95px;
+    background-color: white;
+
+    animation: opacity 1.5s cubic-bezier(.67,-0.07,.86,.5);
+}
+
+.img-container-moon.active {
+    display: block;
+    visibility: visible;
+    position: relative;
+    left: 10px;
+    border-radius: 100px;
+    width: 95px;
+    height: 95px;
+    background-color: white;
+    opacity: 0;
+
+    animation: test2Back 1.5s ease;
+}
+
+
+.img-container {
+    display: none;
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+/* Hrana i piće */
+.groups {
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    font-size: 1.1em;
+    font-family: sans-serif;
+}
+
+.groups a {
+    color: var(--text-light);
+}
+
+.groups a[id="active"]
+{
+    color: var(--text);
+}
+
+.groups.light a {
+    color: black;
+}
+
+.groups.light a[id="active"]
+{
+    color: black;
+}
+
+a[id="active"]::after {
+    content: "";
+    display: block;
+    width: 17px;
+    height: 5px;
+    margin-top: 5px;
+    background-color: var(--gold);
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pice {
+    margin-left: 1em;
+}
+
+
+
+/* All items */
+.all-item-groups {
+    display: flex;
+    margin-bottom: 2em;
+    font-size: 0.5em;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.item-group
+{
+    display: inline-flex;
+    margin-top: 3.5em;
+    align-items: center;
+    background: var(--item);
+    width: 88%;
+    border-radius: 23px;
+    height: 11vh;
+
+    transition: background-color 1.5s linear;
+}
+
+.item-group.light
+{
+    display: inline-flex;
+    margin-top: 3.5em;
+    align-items: center;
+    background: var(--light-white);
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    width: 88%;
+    border-radius: 23px;
+    height: 11vh;
+
+    transition: background-color 1.5s linear;
+}
+
+.item-group h1 {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.15em;
+    font-family: "caustenregular", sans-serif;
+}
