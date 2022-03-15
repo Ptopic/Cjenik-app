@@ -6,23 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="module" src="main.js"></script>
     <title>Cjenik</title>
 </head>
 <body id="page">
-    <button class="btn-container" onclick="myFunction()" style="transform: scale(0.32);">
-        <div class="img-container-sun active"><img src="images/sun.png" alt="sun" width="125px" id="sun"></div>
-        <div class="img-container-moon"><img src="images/moon.png" alt="moon" width="140px" id="moon"></div>
+    <button class="btn-container" style="transform: scale(0.32);">
+        <div class="img-container-sun active"><img src="../images/sun.png" alt="sun" width="125px" id="sun"></div>
+        <div class="img-container-moon"><img src="../images/moon.png" alt="moon" width="140px" id="moon"></div>
     </button>
     <div class="flex">                                                                          
             <h1 class="logo">River</h1>
-            <button href="" class="languageIcon"><img src="images/hr.svg" alt="" style="width: 2.5em; border-radius: 30px; opacity: 0.7;"></button>
+            <button href="" class="languageIcon"><img src="../images/hr.svg" alt="" style="width: 2.5em; border-radius: 30px; opacity: 0.7;"></button>
     </div>
 
         <!-- Hrana i piće -->
         <div class="groups">
-            <a href="hrana.html" class="hrana">Hrana</a>
-            <a href="pice.html" class="pice" id="active">Piće</a>
+            <a href="hrana.html" class="hrana" id="active">Hrana</a>
+            <a href="pice.html" class="pice">Piće</a>
         </div>
 
         <!-- All items -->
@@ -63,24 +62,6 @@
             </a>
         </div>
 
-
-    
-    <script type="module"> 
-        import { isDark } from './main.js'
-        console.log(isDark);
-        function load()
-        {
-            console.log(isDark);
-            if(isDark == false)
-            {
-                $("#page").toggleClass('light');
-                $(".groups").toggleClass('light');
-                $("a").toggleClass('light');
-                $("item-group").toggleClass('light');
-            }
-        }
-        window.onLoad = load();
-        
-    </script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
